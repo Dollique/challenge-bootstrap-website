@@ -1,0 +1,66 @@
+// Typography
+body {
+    color: $light;
+}
+
+h1, h2, h3, h4, h5, h6,
+.btn {
+    @extend .font-monospace;
+    font-weight: 600;
+}
+
+p {
+    @include media-breakpoint-up(sm) {
+        font-size: 1.3rem;
+    }
+    @include media-breakpoint-up(md) {
+        font-size: 1.4rem;
+    }
+    @include media-breakpoint-up(lg) {
+        font-size: 1.5rem;
+    }
+}
+
+
+// Buttons
+.btn.btn-link {
+    padding: 0;
+    border: 0;
+}
+
+
+// Links (inline)
+.container {
+    p a {
+        font-weight: 600;
+    }
+    
+    p a,
+    .link-anim {
+        display: inline-block;
+        text-decoration: none;
+        color: $dark;
+
+        &:after {
+            content: '';
+            display: block;
+            border-bottom: solid 1px $dark; 
+            transform: scaleX(0);
+            transition: transform 200ms ease-in-out;
+        }
+
+        &.light {
+            color: $light;
+
+            &::after {
+                border-bottom-color: $light;
+            }
+        }
+
+        &:hover {
+            &:after { 
+                transform: scaleX(1);
+              }
+        }
+    }
+}

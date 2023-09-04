@@ -1,0 +1,10 @@
+// Custom SCSS Variables
+@import "01_variables";
+
+// Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// CSS Overwrites need to be imported after bootstrap
+@import "02_resets";
+@import "03_custom";
+@import "04_animations";

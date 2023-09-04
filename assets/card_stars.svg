@@ -1,0 +1,33 @@
+<svg width="324" height="136" viewBox="0 0 324 136" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<path id="star1" d="M43 35L52.6541 64.7123H83.8954L58.6207 83.0755L68.2748 112.788L43 94.4245L17.7252 112.788L27.3793 83.0755L2.10457 64.7123H33.3459L43 35Z" fill="#FAFAFA"/>
+<path id="star2" d="M129 13L138.654 42.7123H169.895L144.621 61.0755L154.275 90.7877L129 72.4245L103.725 90.7877L113.379 61.0755L88.1046 42.7123H119.346L129 13Z" fill="#FAFAFA"/>
+
+<g id="star3" style="transform-origin: center; transform-box: fill-box;">
+    <path d="M202 0L217.267 46.9868L266.672 46.9868L226.702 76.0263L241.969 123.013L202 93.9737L162.031 123.013L177.298 76.0263L137.328 46.9868L186.733 46.9868L202 0Z" fill="#FAFAFA"/>
+</g>
+
+<path id="star4" d="M281 15L290.654 44.7123H321.895L296.621 63.0755L306.275 92.7877L281 74.4245L255.725 92.7877L265.379 63.0755L240.105 44.7123H271.346L281 15Z" fill="#FAFAFA"/>
+
+<animateTransform
+    xlink:href="#star2"
+    attributeType="xml"
+    attributeName="transform"
+    type="rotate"
+    from="0 122 52"
+    to="360 122 52"
+    dur="40s"
+    repeatCount="indefinite" />
+
+<animateTransform
+    xlink:href="#star3"
+    attributeName="transform"
+    attributeType="XML"
+    type="scale"
+    values="1 1; 0.8 0.8; 1 1"
+    keyTimes="0; .5; 1"
+    begin="0s"
+    dur="5s"
+    repeatCount="indefinite"
+    fill="freeze"
+    additive="sum" />
+</svg>

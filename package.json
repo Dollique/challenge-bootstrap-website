@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.3.0",
+    "sass": "^1.64.1"
+  },
+  "scripts": {
+    "watch": "sass --watch --update --style=compressed styles/00_import.scss build/style.css",
+    "build": "sass --style=compressed styles/00_import.scss build/style.css"
+  }
+}

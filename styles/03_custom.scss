@@ -1,0 +1,147 @@
+// Header
+header {
+    svg {
+        @include media-breakpoint-up(md) {
+            height: 300px;
+        }
+    }
+}
+
+
+// SwiperJS
+.swiper {
+    .card {
+        justify-content: center;
+        background-color: transparent;
+        border: 0;
+        img {
+            object-fit: cover;
+            flex: 1 auto;
+        }
+    }
+}
+
+
+// Parallax Image
+.parallax {
+  background-image: var(--bg-parallax);
+
+  height: 60vh;
+  
+  background-attachment: fixed;
+  background-position: -40px;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  box-shadow: 0 0 2.5px 2.5px rgba(0, 0, 0, 0.25) inset;
+
+  @include media-breakpoint-up(md) {
+        background-image: var(--bg-parallax-desktop);
+        height: 100vh;
+        background-position: center;
+    }
+}
+
+
+// Buttons
+.btn {
+    display: inline-flex;
+    align-items: center;
+    border: 1px $black solid;
+    border-radius: 15px;
+    padding: 10px 15px;
+
+    font-size: 1.3rem;
+    font-weight: 400;
+
+    svg {
+        margin-right: .6rem;
+    }
+
+    @include media-breakpoint-up(md) {
+        // scale button
+        font-size: 1.8rem;
+        padding: 10px 20px;
+
+        svg {
+            width: auto;
+            height: 38px;
+            margin-right: 1rem;
+
+            path {
+                stroke-width: 0.5;
+            }
+        }
+    }
+}
+
+.btn-secondary {
+    &:hover {
+        background-color: $white;
+        color: $primary;
+
+        svg path {
+            fill: $primary;
+        }
+    }
+}
+
+
+// Cards
+.card-stars {
+    .card {
+        box-shadow: 3px -12px 13px -2px rgba(0, 0, 0, 0.25);
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        width: auto; //324px
+        height: 136px;
+        margin: -66px 10px 0 auto;
+        background-image: url(/assets/card_stars.svg);
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        @include media-breakpoint-up(sm) {
+            margin-right: 50px;
+        }
+        @include media-breakpoint-up(md) {
+            margin-right: 180px;
+        }
+        @include media-breakpoint-up(lg) {
+            margin-right: 80px;
+        }
+        @include media-breakpoint-up(xl) {
+            margin-right: 20px;
+            height: 250px;
+            margin-top: -125px;
+        }
+        @include media-breakpoint-up(xxl) {
+            margin-right: 80px;
+        }
+    }
+}
+
+
+// Footer
+footer {
+    background-color: $secondary;
+
+    .btn {
+        color: $white;
+    }
+    .link-anim {
+        font-weight: normal;
+    }
+
+    .footer-logo {
+        @include media-breakpoint-up(md) {
+            height: 122px;
+        }
+        @include media-breakpoint-up(lg) {
+            height: 152px;
+        }
+    }
+}
